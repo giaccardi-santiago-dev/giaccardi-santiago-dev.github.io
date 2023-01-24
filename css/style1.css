@@ -22,14 +22,17 @@ ol{
     margin-left: 15%;
     margin-right: 15%;
     line-height: 25px;
-    gap: 50px;
 }
 
 /* design of unimplemented functionalities, can't get it right yet! */
 .buttons button{
     margin-top: 10px;
+    padding: 15px;
     background: #ffffff;
     color: black;
+}
+.buttons button:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 }
 
 #topcoder{
