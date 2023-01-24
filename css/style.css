@@ -1,0 +1,32 @@
+/* main design */
+body{
+    text-align: center;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Courier Prime', monospace;
+}
+
+/* design of main interactive content */
+ul li{
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+/* design of main static content */
+
+ol{
+    text-align: start;
+    margin-left: 25%;
+    line-height: 25px;
+    gap: 50px;
+}
+
+/* design of unimplemented functionalities, can't get it right yet! */
+.buttons button{
+    margin-top: 10px;
+    background: #ffffff;
+    color: black;
+}
