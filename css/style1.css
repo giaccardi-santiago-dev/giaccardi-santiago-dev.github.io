@@ -46,3 +46,11 @@ ol{
     margin: right 5px left 5px;
     padding: 0;
 }
+
+#insta_anchor{
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 20pt;
+    font-weight: 700;
+}
