@@ -20,6 +20,11 @@ ul li{
     margin: right 5px left 5px;
     padding: 0; 
 }
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
 /* design of main static content */
 
 ol{
@@ -53,4 +58,14 @@ ol{
     color: inherit;
     font-size: 20pt;
     font-weight: 700;
+}
+
+#jona{
+    font-size: 18pt;
+    color: #9047ff;
+}
+
+#jona:hover{
+    color: #ffd100;
+    text-shadow: rgba(0,0,0,0.5);
 }
