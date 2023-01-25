@@ -8,12 +8,17 @@ body{
 }
 
 /* design of main interactive content */
+ul{
+    margin: top 15px right 0px bottom 15px left 0px;
+    padding: 0;
+}
+
 ul li{
     list-style-type: none;
     text-align: center;
     display: inline-block;
-    margin-top: 15px;
-    margin-left: 10px;
+    margin: right 5px left 5px;
+    padding: 0; 
 }
 /* design of main static content */
 
