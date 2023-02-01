@@ -13,11 +13,11 @@ ul{
     padding: 0;
 }
 
-ul li{
+ul li {
     list-style-type: none;
     text-align: center;
     display: inline-block;
-    margin: right 5px left 5px;
+    margin: 0;
     padding: 0; 
 }
 
@@ -52,6 +52,7 @@ ol{
 }
 .buttons button:hover{
     box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    transform: scale(1.1);
 }
 
 .section-a{
