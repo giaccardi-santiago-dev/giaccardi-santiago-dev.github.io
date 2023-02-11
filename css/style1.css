@@ -69,13 +69,3 @@ ol{
     font-size: 20pt;
     font-weight: 700;
 }
-
-#jona{
-    font-size: 18pt;
-    color: #9047ff;
-}
-
-#jona:hover{
-    color: #ffd100;
-    text-shadow: rgba(0,0,0,0.5);
-}

@@ -96,18 +96,10 @@ p {
 }
 
 #home_button{
-    margin-left: 10px;
     float: left;
-    text-decoration: none;
     padding: 15px;
-    background-color: #ffffff;
-    color: black;
-    border-radius: 5px;
-    font-size: xx-large;
 }
 
 #home_button:hover{
-    background-color: #000000;
-    color: #ffffff;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    transform: scale(1.1);
 }
