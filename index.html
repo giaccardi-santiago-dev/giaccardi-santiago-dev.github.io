@@ -82,15 +82,16 @@
 
     <!-- main static content of the page -->
     <section>
-        <p>I'm a <strong>FULL STACK DEVELOPER</strong>, and this are my skills:</p>
-        <ol>
-            <li>Front-end: HTML, CSS, JavaScript, and front-end framework with Django.</li>
-            <li>Back-end: Python, and back-end framework with Django.</li>
-            <li>Database and API development and integration: MongoDB and <strong>Python</strong>.</li>
-            <li>Cloud computing and server managment: Microsoft Azure, Google Cloud, and Linux administration with usage of Apache and Nginx  .</li>
-            <li>Version control: Git and Github. Proficient at managment of merge conflicts.</li>
-            <li>Communication: Good verbal and written communication skills for effectively collaborating with cross-functional teams.</li>
-        </ol>
+        <p id="main-info" data-i18n="main-info">I'm a <strong>FULL STACK DEVELOPER</strong>, and this are my skills:
+            <ol>
+              <li data-i18n="front-end">Front-end: HTML, CSS, JavaScript, and front-end framework with Django.</li>
+              <li data-i18n="back-end">Back-end: Python, and back-end framework with Django.</li>
+              <li data-i18n="database-and-api">Database and API development and integration: MongoDB and <strong>Python</strong>.</li>
+              <li data-i18n="cloud-computing">Cloud computing and server management: Microsoft Azure, Google Cloud, and Linux administration with usage of Apache and Nginx.</li>
+              <li data-i18n="version-control">Version control: Git and Github. Proficient at management of merge conflicts.</li>
+              <li data-i18n="communication">Communication: Good verbal and written communication skills for effectively collaborating with cross-functional teams.</li>
+            </ol>
+    </section>
         <!--links to "topcoder" and "leetcode" account -->
         <a class="section-a" href="https://www.topcoder.com/members/gs-dev" target="_blank">
             <img src="images/images_index/topcoder_v2.png" width="75px" height="auto" alt="topcoder logo">
@@ -98,21 +99,88 @@
         <a class="section-a" href="https://leetcode.com/user0640U/" target="_blank">
             <img src="images/images_index/leetcode.png" width="40x" height="auto" alt="leetcode logo">
         </a>
-    </section>
 
     <!-- main unimplemented functionalities of the page -->
     <div class="buttons">
         <!-- this button will change the written language of the unique section inside the body -->
-        <button>Change language</button> <!-- English, hindi, mandarin, spanish-->
+        <button id="translateButton">Change between languages</button> <!-- English, hindi, mandarin, spanish-->
         <!-- this buttton will alternate between a dark theme for easy viewing in darkness, and a light theme for easy viewing in broadlight -->
-        <button>Change between dark theme/light theme</button>
+        <button id="mode-switch">Change between dark theme/light theme</button>
         <!-- this button will read the contents of the unique section inside the body, so it can be heard while performing other actions (it will check against the written language that was chosen) -->
-        <button>Text to voice</button>
+        <button id="text-speech">Text to voice</button>
+        <a href="pages/search_engine.html"><button>Reto Clon de Google</button></a>
     </div>
     <hr>
     <footer>
         <p>🔗 <a href="https://www.youtube.com/@winterpiss"><strong>Savant</strong></a> - Zealot</p><audio src="../audios/Savant-Zealot.mp3" preload="auto" controls></audio>
         <p>copyright © 2023 <strong>gs-dev</strong>™️</p>
     </footer>
+    <script>
+        const modeSwitch = document.getElementById("mode-switch");
+        modeSwitch.addEventListener("click", () => {
+          document.body.classList.toggle("light-mode");
+        });
+    </script>
+    <script>
+        const textInput = document.getElementById("main-info");
+        const speakButton = document.getElementById("text-speech");
+    
+        speakButton.addEventListener("click", () => {
+          const speech = new SpeechSynthesisUtterance(textInput.value);
+          window.speechSynthesis.speak(speech);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@20.2.2/i18next.min.js"></script>
+    <script>
+      i18next.init({
+        lng: "english",
+        resources: {
+        english: {
+            translation: {
+              "main-info": "I'm a <strong>FULL STACK DEVELOPER</strong>, and these are my skills:",
+              "front-end": "Front-end: HTML, CSS, JavaScript, and front-end framework with Django.",
+              "back-end": "Back-end: Python, and back-end framework with Django.",
+              "database-and-api": "Database and API development and integration: MongoDB and <strong>Python</strong>.",
+              "cloud-computing": "Cloud computing and server management: Microsoft Azure, Google Cloud, and Linux administration with usage of Apache and Nginx.",
+              "version-control": "Version control: Git and Github. Proficient at management of merge conflicts.",
+              "communication": "Communication: Good verbal and written communication skills for effectively collaborating with cross-functional teams.",
+            }
+          },
+          spanish: {
+            translation: {
+                "main-info": "Soy un <strong>DESARROLLADOR DE PILA COMPLETA</strong>, y estas son mis habilidades:", 
+                "front-end": "Desarrollo de frente: HTML, CSS, Javascript, y estructura de interfaz con Django.",
+                "back-end": "Desarrollo de fondo: Python, y estructura de fondo con Django.",
+                "database-and-api": "Bases de datos y desarrollo e implementacion interfaz de programación de aplicaciones: MongoDB y <strong>Python</strong>.",
+                "cloud-computing": "Computación en la nube y administración de servidores: Microsoft Azure, Google Cloud, y administracion de Linux con el uso de Apache y Nginx.",
+                "version-control": "Control de versionado: Git y Github, proeficiente en la administracion de conflictos de union",
+                "communication": "Comunicacion: Buenas habilidades de comunicacion, verbales y escritas, para colaboracion efectiva entre equipos multi funcionales.",
+            }
+          },
+          hindi: {
+            translation: {
+                "main-info": "मैं एक <strong>फुल स्टैक डेवलपर</strong> हूँ, और ये मेरे कौशल हैं:",
+                "front-end": "फ्रंट-एंड: HTML, CSS, JavaScript, और Django के साथ फ्रंट-एंड फ्रेमवर्क",
+                "back-end": "बैक-एंड: Python, और Django के साथ बैक-एंड फ्रेमवर्क",
+                "database-and-api": "डेटाबेस और API विकास और एकत्रिति: MongoDB और <strong>Python</strong>",
+                "cloud-computing": "क्लाउड कम्प्यूटिंग और सर्वर प्रबंधन: Microsoft Azure, Google Cloud, और Linux प्रशासन विविध Apache और Nginx के उपयोग के साथ",
+                "version-control": "वर्जन नियंत्रण: Git और Github. मर्ज विवादों का प्रबंधन कुशल",
+                "communication": "संवाद: क्रॉस-फ़ंक्शनल टीमों के साथ प्रभावी ढांचे से संवाद करने के लिए अच्छी मौखिक और लिखित संवाद कौशल",
+            }
+          },
+          mandarin: {
+            translation: {
+                "main-info": "我是一位 <strong>FULL STACK 开发者</strong>, 这是我的技能：",
+                "front-end": "前端:HTML、CSS、JavaScript,以及基于Django的前端框架。",
+                "back-end": "后端:Python,以及基于Django的后端框架。",
+                "database-and-api": "数据库和API开发和集成:MongoDB和<strong>Python</strong>。",
+                "cloud-computing": "云计算和服务器管理:Microsoft Azure、Google Cloud,以及使用Apache和Nginx的Linux管理。",
+                "version-control": "版本控制:Git和Github。熟练处理合并冲突。",
+                "communication": "沟通：有效地与跨功能团队合作，有良好的口头和书面沟通技能。",
+            }
+        }
+    }
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+body {
+    background: #121212;
+    color: #FFFFFF;
+    width: 100%;
+    display: flexbox;
+    margin: 0px;
+}
+
+header {
+    float: right;
+}
+
+#header-links {
+    display: inline-flexbox;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+ul ul {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  /* Show the submenu when the parent is hovered over */
+ul li:hover > ul {
+    visibility: visible;
+}
+
+section {
+    text-align: center;
+}
+
+footer {
+    background: #070707;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
